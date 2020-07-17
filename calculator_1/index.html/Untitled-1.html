@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header>
+Adding Machine
+</header>
+<body>
+    
+</body>
+<script>
+const form = document.querySelector('form');
+const resultReport = document.querySelector('.result');
+let operationChoice = from.operation.value;
+
+function fromHandler(event){
+    let result;
+    console.log(operationChoice);
+}
+
+if (operationChoice == 'add) {
+    result = parseFloat(form.num1.value)  + parseFloat(from.num2.value);
+}else if (operationChoice == 'subtract'){
+    result = parseFloat(form.num1.value)  - parseFloat(from.num2.value);
+}else if (operationChoice == 'multiply'){
+    result = parseFloat(form.num1.value)  * parseFloat(from.num2.value);
+}else {
+    result = parseFloat(form.num1.value)  / parseFloat(from.num2.value);
+}
+console.log(result);
+
+resultReport.innerhTML = 'The result is' + result + '.';
+
+event.preventDefault();
+
+form.addEventListener('submit', formHandler);
+
+
+</script>
+</html>
